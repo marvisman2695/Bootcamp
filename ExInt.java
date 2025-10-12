@@ -24,5 +24,23 @@ public class ExInt{
         double totalWeight = (mum + son + son) *2.0 /3;
         System.out.println(totalWeight);
     
+
+     
+        //score
+        int chinese = 98;
+        int english = 109;
+        int maths = 43;
+        int ls = 76;
+        int econ = 66;
+        int totalScore = chinese + english + maths + ls + econ;
+        System.out.println(totalScore);
+
+        //price
+        int piePrice = 28;
+        double discount = 0.7;
+        double finalPrice = piePrice * discount;
+        System.out.println(finalPrice);
+        
+
     }
 }
