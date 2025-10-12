@@ -40,7 +40,10 @@ public class ExInt{
         double discount = 0.7;
         double finalPrice = piePrice * discount;
         System.out.println(finalPrice);
+
+        System.out.println("hello world,welcome!!");
         
+
 
     }
 }
