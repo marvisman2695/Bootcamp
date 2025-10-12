@@ -32,7 +32,7 @@ System.out.println(totalSalary);
 //discount * (multiply)
 int price = 150;
 //Naming convension (camel case)
-finalPrice = price;
+//double finalPrice = price;
 
 double discountRate = 0.8;
 
