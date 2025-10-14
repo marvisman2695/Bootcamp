@@ -73,5 +73,56 @@ double discount = 0.95;
 double appleTotalprice = applePrice * appleCount;
 System.out.println(appleTotalprice);
 
+// ! String has + operation
+String firstName = "Jennie";
+String lastName = "wong";
+String fullName = firstName + " " + lastName;
+System.out.println(fullName);
+
+// short cut; sysout
+
+String emptyString = "";
+System.out.println(emptyString);
+
+//!String has no -, *,/ operations
+
+//!For + operation in String , it becomes String no matter what they are.
+
+//String Value + double value -> String Value
+//Assign String value into String varialbeS
+String s3 = "Sally" + 0.3;
+System.out.println(s3);  // sally0.3
+String s4 = "Leo" +102;
+System.out.println(s4); // Leo102
+
+// double result = "Vincent" + 8.4 // error
+
+//! Methods (Functions)
+// 1. length
+String teacher = "Steven";
+System.out.println(teacher.length()); // 6
+
+
+// 2. isEmpty
+System.out.println(teacher.isEmpty()); // false
+System.out.println(emptyString.isEmpty()); // true
+
+//3. equals
+String s6="abc";
+String s7="abc";
+System.out.println(s6.equals(s7)); // true
+String s8 = "abcd";
+System.out.println(s8.equals(s7)); // false
+
+
+//4. charAt
+// ! Index begins at 0
+System.out.println(s8.charAt(0)); //a
+System.out.println(s8.charAt(1)); //b
+System.out.println(s8.charAt(2)); //c
+System.out.println(s8.charAt(3)); //d
+//system.out.prinln(s8.charAt(4)); // error
+//system.out.ptinln(s8.charAt(-1)); // error
+
 }
 }
