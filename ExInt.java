@@ -24,8 +24,9 @@ public class ExInt{
         double totalWeight = (mum + son + son) *2.0 /3;
         System.out.println(totalWeight);
     
+        
 
-     
+        
         //score
         int chinese = 98;
         int english = 109;
@@ -43,6 +44,13 @@ public class ExInt{
 
         System.out.println("hello world,welcome!!");
         
+
+
+
+
+
+
+
 
 
     }
