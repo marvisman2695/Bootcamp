@@ -29,6 +29,7 @@ public class DemoLoop {
     
     // loop -> 0,1,2,3,4,5 -> total = 15
     int total = 0;
+    int sum = 0;
     for (int i = 0; i < 6; i++) {
       total = total + i; // total += i
       System.out.println("total=" + total);
@@ -40,7 +41,14 @@ public class DemoLoop {
        System.out.println(i);  //!幾時知個{} 放邊?
         }
       }
-          
+        
+       for ( int i = 0; i < 21; i++) {
+        if (i % 2 == 0) {
+          sum += i ;
+        }
+       }
+        System.out.println(sum); //110
+      
         // Sum up all even numbers between 0 -20
 
         // int result1 = 0;
@@ -49,22 +57,13 @@ public class DemoLoop {
         // result1 = result1 + e; // result += e
         // System.out.println("result1=" + result1);
 //!!!
-       int sum = 0;
-       for ( int i = 0; i < 21; i++) {
-        if (i % 2 == 0) {
-          sum += i ;
-        }
-       }
-        System.out.println(sum); //110
-      
+       
 
 
       //0-100, sum up all number that is divided by 3
-
-
-
       }
-    }
     
+  }
+}
 
 

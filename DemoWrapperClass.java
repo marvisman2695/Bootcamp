@@ -82,7 +82,7 @@ Integer i22 = 9;
 
 //Primitive
 //int x-=3
-// we call "x" as varaible, while 3 is int vale\ue
+// we call "x" as varaible, while 3 is int value
 
 //not- Primirtive (Class)
 // string s = hello
