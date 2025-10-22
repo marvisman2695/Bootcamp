@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class DemoPrimitiveII {
   public static void main(String[] args) {
       //Overflow
@@ -30,11 +32,38 @@ public class DemoPrimitiveII {
 float f11 = (float) 10.5d;
 long l12 = 2_200_000_000l;
 int i11 = (int)l12; // You confirmed the risk
-System.out.println(i11);
+System.out.println(i11); //-2094967296
 
 
-
+  
 //char -> int
+// 'a' 97
+    // 'b' 98
+    // 'A' 68
+    char c1 = 'a';
+    System.out.println(c1 + 1); // 98
+    System.out.println('a' + 'b'); // 195
+    System.out.println('!' + 1); // 34
+    System.out.println(' ' + 1); // 33
+
+    System.out.println('你' + 1); // 20321
+
+    int result = '你' + 100;
+    // 20320 (你) + 100 -> int value
+    // int value -> int variable
+    System.out.println(result); // 20420
+
+    long l1 = 'a'; // OK
+
+    // Math.random
+    // new Random()
+    int r1 = new Random().nextInt(3); // 0 - 2 
+    System.out.println("r1=" + r1);
+
+    // marksix (1-49)
+
+    // 'a' - 'z' (ascii code)
+    // 97 - 122
 
 
 

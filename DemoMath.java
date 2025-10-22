@@ -1,3 +1,6 @@
+
+import java.util.Scanner;
+
 public class DemoMath {
   public static void main(String[] args) {
     double r = Math.pow(2, 4.0); //16.0
@@ -43,7 +46,12 @@ public class DemoMath {
 
   System.out.println(Math.random());
 
-
+//Scanner
+Scanner s = new Scanner(System.in);
+System.out.println();
+int input = s.nextInt();
+int result = input * 3;
+System.out.println("result=" + result);
   }
 }
   
