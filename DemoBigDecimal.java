@@ -1,3 +1,11 @@
+
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
+ public class DemoBigDecimal {
+
+ public static void main(String[] args) {
+     
  System.out.println(0.2 + 0.1); // 0.30000000000000004
     System.out.println(0.3 - 0.1); // 0.19999999999999998
     System.out.println(0.1 * 0.2); // 0.020000000000000004
@@ -38,4 +46,5 @@
         .divide(BigDecimal.valueOf(f), 2, RoundingMode.HALF_UP) // Half = 5
         .doubleValue();
     System.out.println(result);
-    
+ }
+}

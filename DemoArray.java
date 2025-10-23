@@ -2,6 +2,8 @@
 
 
 
+
+
 public class DemoArray {
   public static void main(String[] args) {
       //The way to store value: Primitives, Wrapper Class, String(17types)
@@ -66,7 +68,7 @@ public class DemoArray {
     int[] arr4 = new int[5];
     arr4[0] = 10;
     arr4[1] = -4;
-    arr4[2] =90;
+    arr4[2] = 90;
     arr4[3] = 100;
     arr4[4] = -20;
 
@@ -104,5 +106,48 @@ public class DemoArray {
     
 
 
-  }
+    // String[]
+    String[] names = new String[3];
+    names[0] = "John";
+    names[1] = "Jennie";
+    names[2] = "Steve";
+    for (int i = 0; i < names.length; i++) {
+      System.out.println(names[i]);
+        
+    }
+    // loop: Find name startWith J, print their name
+    //startsWith()
+    //names -> Array
+    //names[i] -> String
+       for (int i = 0; i < 10; i++) {
+        if (names[i].startsWith("j"));
+       }
+      for (int i = 0; i < names.length; i++) {
+       if (names[i]; indexOf("nn"); f(!= -1));
+       }
+       System.out.println(names[i]);
+
+       // charAt
+
+       //loop: Find the index of "e" for each name, put them for array
+       for (int i = 0; i < names.length; i++) { // Loop Every String (i))
+           for (int J = 0; i < names[i].length(); i++) // Loop every Charater in a String (j)
+           if(names[i].charAt(J)=='e') 
+            
+            
+            
+          // search + count
+          String n1 = "Mandy";
+          // Count the number of "d"
+          int dCount = 0;
+          for (int i = 0; i <n1.length(); i++) {
+            if (n1.charAt(i) == "d"){
+              dCount++;
+            }
+          }
+
+            
+           
+
+      }
   }

@@ -8,6 +8,7 @@ System.out.println(teacher.length()); // 6
 
 // 2. isEmpty
 System.out.println(teacher.isEmpty()); // false
+String emptyString;
 System.out.println(emptyString.isEmpty()); // true
 
 //3. equals
@@ -43,7 +44,6 @@ String s13 ="Tommy";
 System.out.println(s11.isEmpty()); //true
 System.out.println(s12.isEmpty()); //false
 System.out.println(s13.isEmpty()); //false
-
 System.out.println(s11.isBlank()); //true
 System.out.println(s12.isBlank()); //true
 System.out.println(s13.isBlank()); //false

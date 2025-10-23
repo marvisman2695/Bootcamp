@@ -1,3 +1,5 @@
+
+
 public class DemoLoop {
   public static void main(String[] args) {
     // flow -> if-else
@@ -29,20 +31,21 @@ public class DemoLoop {
     
     // loop -> 0,1,2,3,4,5 -> total = 15
     int total = 0;
-    int sum = 0;
     for (int i = 0; i < 6; i++) {
       total = total + i; // total += i
+    }
       System.out.println("total=" + total);
 
       // for loop + if (1-10, print odd number only)
     
       for (int i = 0; i < 11; i++) {
-        if(i % 2 == 1) {
+        if(i % 2 == i) {
        System.out.println(i);  //!幾時知個{} 放邊?
         }
       }
         
-       for ( int i = 0; i < 21; i++) {
+      int sum = 0;
+       for (int i = 0; i < 21; i++) {
         if (i % 2 == 0) {
           sum += i ;
         }
@@ -61,9 +64,43 @@ public class DemoLoop {
 
 
       //0-100, sum up all number that is divided by 3
+      sum = 0;
+      for (int i = 0; i < 101; i++) {
+        if (i % 3 == 0) {
+          sum += i;
+        }
       }
-    
+      System.out.println(sum); // 1683
+
+      // 0-50, the difference between the sum of all even number and the sum of all odd number
+      int evenSum = 0;
+      int oddSum = 0;
+      for (int i = 0; i < 51; i++) {
+          if (i % 2 == 0) {
+            evenSum += i;
+          } else {
+            oddSum += i;
+          }
+      }
+    int evenOddDiff = evenSum -oddSum;
+    System.out.println(evenOddDiff); //25
+
+    //0-20, sum all even number; 21-50, sum up odd numbers
+    // Find the product of both total numbers
+    evenSum = 0;
+    oddSum = 0;
+    for (int i = 0; i < 51; i++) {
+        if (i<= 20) {
+        if (i % 2 == 0) {
+        evenSum += i;
+       }
+      } else if (i >=21 && i <= 50) {
+    if (i % 2 == 1) {
+      oddSum +=i;
+    }
   }
 }
-
+System.out.println(evenSum * oddSum);
+  }
+}
 
