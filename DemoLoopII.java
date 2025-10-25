@@ -105,12 +105,15 @@ public class DemoLoopII {
         break;//break the loop
       } 
     }
+    System.out.println(targetName);
 
-    //Scanner
-    //Scanner s = new Scanner(system.in);
-    //.........
-    //................
-
+    
+    // Scanner
+    // Scanner s = new Scanner(System.in);
+    // System.out.println("Please input an integer:");
+    // int input = s.nextInt();
+    // int result = input * 3;
+    // System.out.println("result=" + result);
   }
 }
 

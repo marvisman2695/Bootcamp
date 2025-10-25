@@ -34,7 +34,7 @@ public class DemoLooopII {
         //amounts[i] = 100; // ok, write operation
       }
 
-      //!!!!important sum up values
+      //!!!!(important) sum up values
       double total = 0.0;
       for (double amount : amounts) {
         total = BigDecimal.valueOf(total).add(BigDecimal.valueOf(amount)).doubleValue();
