@@ -144,7 +144,7 @@ public class DemoArray {
           // Count the number of "d"
           int dCount = 0;
           for (int i = 0; i <n1.length(); i++) {
-            if (n1.charAt(i) == "d") {
+            if (n1.charAt(i) == 'd') {
               dCount++;
             }
           }

@@ -94,7 +94,7 @@ System.out.println(s17.indexOf("o", 3)); //4
 System.out.println(s17.indexOf("n", 3, 4)); //-1
 
 //lastIndexOf()
-String s20 = "hello wor;d";
+String s20 = "hello world";
 System.out.println(s20.indexOf("l"));//2
 System.out.println(s20.lastIndexOf("l"));//9
 

@@ -59,7 +59,7 @@ public class DemoMethod {
       return s1.length() >10;
     }
     
-    //Design Methof : Given an int value, if it is odd number, reutnr this number = 2;
+    //Design Method : Given an int value, if it is odd number, reutnr this number = 2;
     // if it is even number, return this number * 3
     public static int multiplyResult(int x) {
       // int result;

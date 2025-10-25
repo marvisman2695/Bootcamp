@@ -56,9 +56,8 @@ public class DemoArraySwap {
          System.out.println(Arrays.toString(name2)); // [n,e,v,e,t,S]
          //! char[] -> String
          System.out.println(String.valueOf(name2)); //nevetS   
+         
         }
-
-      
       }
 
 

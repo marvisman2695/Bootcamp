@@ -48,9 +48,5 @@ public class DemoOperator {
           //h++ -> h becomes 5
 
 
-
-
-
-
     }
 }

@@ -67,7 +67,7 @@ System.out.println(i11); //-2094967296
     // 'a' - 'z' (ascii code)
     //1-26
     // 97 - 122
-    int targetAscii = new Random().nextInt(26) = 97;
+    int targetAscii = new Random().nextInt(26) + 97;
     System.out.println((char) targetAscii); // random'a' - 'z'
 
 

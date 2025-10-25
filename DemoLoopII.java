@@ -95,7 +95,7 @@ public class DemoLoopII {
     //Loop + if + break/continue
     //1. break
     //searching
-    String[] names = new String[] {"John", "Peter", "Sally", "Vincent"}; // fixed- length = 4
+    String[] names = new String[] {"John", "Peter", "Sally", "Vincent", "Steven"}; // fixed- length = 4
     // Find the names the length > 5
     String targetName = null;
     for (int i = 0; i < names.length; i++) {
