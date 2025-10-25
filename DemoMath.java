@@ -1,5 +1,4 @@
 
-import java.util.Scanner;
 
 public class DemoMath {
   public static void main(String[] args) {
@@ -47,11 +46,11 @@ public class DemoMath {
   System.out.println(Math.random());
 
 //Scanner
-Scanner s = new Scanner(System.in);
-System.out.println();
-int input = s.nextInt();
-int result = input * 3;
-System.out.println("result=" + result);
+//Scanner s = new Scanner(System.in);
+//System.out.println();
+//int input = s.nextInt();
+//int result = input * 3;
+//System.out.println("result=" + result);
   }
 }
   

@@ -1,3 +1,7 @@
+
+import java.util.Arrays;
+
+
 public class DemoArray {
   public static void main(String[] args) {
       //The way to store value: Primitives, Wrapper Class, String(17types)
@@ -116,14 +120,14 @@ public class DemoArray {
        //loop: Find the index of "e" for each name, put them an array
        int eCount = 0;
        for (int i = 0; i < names.length; i++) { // Loop Every String (i))
-           for (int j = 0; j < names[i].length(); i++) // Loop every Charater in a String (j)
-           if(names[i].charAt(j)=='e') {
-            eCount ++;
+           for (int j = 0; j < names[i].length(); i++) { // Loop every Charater in a String (j)
+              if(names[i].charAt(j)=='e') {
+                  eCount ++;
+              }
            }
-          }
         }
-        int[] arr10 = new int[eCount];
-        int idx =0;
+        int [] arr10 = new int[eCount];
+        int idx = 0; 
         for (int i = 0; i < names.length; i++) { // Loop Every String (i)
           for (int j = 0; j < names[i].length(); j++) { // Loop every Charater in a String(j)
             if (names[i].charAt(j) == 'e') {
@@ -140,7 +144,7 @@ public class DemoArray {
           // Count the number of "d"
           int dCount = 0;
           for (int i = 0; i <n1.length(); i++) {
-            if (n1.charAt(i) == "d"){
+            if (n1.charAt(i) == "d") {
               dCount++;
             }
           }

@@ -60,11 +60,15 @@ System.out.println(i11); //-2094967296
     int r1 = new Random().nextInt(3); // 0 - 2 
     System.out.println("r1=" + r1);
 
-    // marksix (1-49)
+    // marksix (1-49) - -> 0-48
+    int marksix = new Random(). nextInt(49) +1;
+    System.out.println(marksix); // a number within 1-49
 
     // 'a' - 'z' (ascii code)
+    //1-26
     // 97 - 122
-
+    int targetAscii = new Random().nextInt(26) = 97;
+    System.out.println((char) targetAscii); // random'a' - 'z'
 
 
   }

@@ -8,7 +8,7 @@ System.out.println(teacher.length()); // 6
 
 // 2. isEmpty
 System.out.println(teacher.isEmpty()); // false
-String emptyString;
+String emptyString = "";
 System.out.println(emptyString.isEmpty()); // true
 
 //3. equals
