@@ -1,4 +1,7 @@
 //! Class 作者 write down the ways to access(read-getter & write-setter) the attribute values
+// ! Method Defintion: Presentation
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 public class Dog {
 //! Attribute
@@ -14,7 +17,6 @@ public Dog() {
 public Dog(double weight, double height) {
   this.weight = weight; //任你define的過程
   this.height = height; //任你define的過程
-  this.bmi = (weight * height)/2;
 }
 
 //! getter for weight and height
@@ -25,8 +27,16 @@ public double getWeight() {
 public double getHeight() {
   return this.height;
 }
+
+// ! A presentation of weight and height
 public double getBmi() {
-  return this.bmi;
+  BigDecimal heightSquare = BigDecimal.valueOf(height) //
+  .multiply(BigDecimal.valueOf(height)) //
+  .setScale(2, RoundingMode.HALF_UP);
+
+  return BigDecimal.valueOf(this.weight) //
+  .divide(heightSquare, 2, RoundingMode.HALF_UP)
+  .doubleValue();
 }
 
 
@@ -49,14 +59,15 @@ public static void main(String[] args) {
     System.out.println(d2.getWeight());
     System.out.println(d2.getHeight());
 
-    d2.weight = 102;
-    d2.height = 78;
 
     //! double primitive default value = 0.0
     Dog d3 = new Dog();
     System.out.println(d3.getHeight()); //0.0
     System.out.println(d3.getWeight()); // 0.0
 
+
+    System.out.println(d1.getBmi());
+    System.out.println(d2.getBmi());
 }
 
 }
