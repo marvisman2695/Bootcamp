@@ -1,15 +1,34 @@
-// ! Class -> blueprint(模), file (harddisk)
+
 // ! Object
 public class Cat { //形容緊class 有咩特徵
   // ! Attribute
   private String name;
   private int age;
 
-  //! Constructor
+  //! Constructor (一旦打New 就會觸發佢行一次)
+  //!一個class 可以唔只一個constructor
+  //! Empty Constructor (No Parameter)
   public Cat() { 
     System.out.println("creating a cat ...");
     this.name = "John"; // 過程中一定會經過此地, 有this 一定要寫
     this.age = 10;
+  }
+// Method 名唔會同class 名一樣
+//! All Arguement Constructor
+  public Cat(String name, int age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  //!Object Method (instance Method)
+  //c1.getName
+  public String getName() {
+    return this.name;
+  }
+
+//! Object Method (intstance Method)
+  public int getAge() {
+    return this.age;
   }
 
   public static void main(String[] args) {
@@ -44,5 +63,11 @@ public class Cat { //形容緊class 有咩特徵
     //! excel row -> object
 
     // int, double, boolean, String
+
+    Cat c3 = new Cat("Mary", 8);
+    Cat c4 = new Cat(); //John 10
+    System.out.println(c3.getAge()); //8
+    System.out.println(c4.getAge()); // 10
+    System.out.println(c3.getName()); //8
   }
 }

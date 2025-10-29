@@ -39,11 +39,11 @@ public class DemoLoop {
       // for loop + if (1-10, print odd number only)
     
       for (int i = 0; i < 11; i++) {
-        if(i % 2 == i) {
+        if(i % 2 == 1) {
        System.out.println(i);  //!幾時知個{} 放邊?
         }
       }
-        
+      // sum up all even numbers between 0-20
       int sum = 0;
        for (int i = 0; i < 21; i++) {
         if (i % 2 == 0) {
@@ -52,7 +52,7 @@ public class DemoLoop {
        }
         System.out.println(sum); //110
       
-        // Sum up all even numbers between 0 -20
+        
 
         // int result1 = 0;
         // for (int e = 0; e < 21; e++)
@@ -89,8 +89,8 @@ public class DemoLoop {
     // Find the product of both total numbers
     evenSum = 0;
     oddSum = 0;
-    for (int i = 0; i < 51; i++) {
-        if (i<= 20) {
+    for (int i = 0; i < 51; i++) { // non-business meaning (the number of times){
+        if (i<= 20) { // business meaning, explicit numbers aligns the requirements.
         if (i % 2 == 0) {
         evenSum += i;
        }
@@ -100,6 +100,8 @@ public class DemoLoop {
     }
   }
 }
+System.out.println(evenSum);
+System.out.println(oddSum);
 System.out.println(evenSum * oddSum);
   }
 }

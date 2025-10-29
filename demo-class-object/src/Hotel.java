@@ -31,6 +31,5 @@ public class Hotel {
       String[] names = new String[] {"Ritz","Cordis"};
       int[] rooms = new int[] {171,665};
 
-    }
-  
+    }  
 }

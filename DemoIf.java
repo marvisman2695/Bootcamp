@@ -11,7 +11,7 @@ public class DemoIf {
       System.out.println("x is larger than 4"); // skip
     }
 
-    // AND OR
+    // AND&& OR||
     int y = 10;
     if (x > 2 && y < 20) { // true && true -> true
       System.out.println("hello"); // print
