@@ -1,35 +1,61 @@
 public class Hotel {
 
-  private String names;
-  private int rooms;
+  private String name;
+  private int room;
+  private double rating;
 
   public Hotel() {
-    System.out.println("locating the hotel...");
-    this.names = "Ritz";
-    this.rooms = 171;
   }
+
+  public Hotel(String name, int room, double rating) {
+    this.name = name;
+    this.room = room;
+    this.rating = rating;
+  }
+
+  public String getName() {
+    return this.name;
+  }
+
+  public int getRoom() {
+    return this.room;
+  }
+
+  public double getRating() {
+    return this.rating;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public void setRoom(int room) {
+    this.room = room;
+  }
+  public void setRating(double rating) {
+    this.rating = rating;
+  }
+
   public static void main(String[] args) {
 
-      Hotel h1 = new Hotel();
-      System.out.println(h1.names);
-      System.out.println(h1.rooms);
+      Hotel h1 = new Hotel("Cordis",665,4.7);
+      System.out.println(h1.name);
+      System.out.println(h1.room);
+      System.out.println(h1.rating);
       
 
-      Hotel h2 = new Hotel();
-      System.out.println(h2.names);
-      System.out.println(h2.rooms);
+      Hotel h2 = new Hotel("Ritz",171,5.0);
+      System.out.println(h2.name);
+      System.out.println(h2.room);
+      System.out.println(h2.rating);
 
-      h2.names = "Cordis";
-      h2.rooms = 665;
-      
-      Hotel[] hotels = new Hotel[] {h1, h2};
-      System.out.println(hotels[2].names);
-      System.out.println(hotels[2].rooms);
-    
+      Hotel h3 =new Hotel("LM", 228, 4.9);
+      System.out.println(h3.getName());
+      System.out.println(h3.getRoom());
 
       // without Class
-      String[] names = new String[] {"Ritz","Cordis"};
-      int[] rooms = new int[] {171,665};
-
+      String[] name = new String[] {"Ritz","Cordis"};
+      int[] room = new int[] {171,665};
+      double[] rating = new double[] {4.7,5.0};
     }  
 }

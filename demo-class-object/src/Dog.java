@@ -8,15 +8,25 @@ public class Dog {
 private double weight;
 private double height;
 
-//!constructor
+//!constructor - 一定係public
 //! empty constructor, all args constructor
 public Dog() {
 
 }
 
+//! What is the meaning og "this"?
 public Dog(double weight, double height) {
   this.weight = weight; //任你define的過程
   this.height = height; //任你define的過程
+}
+//! java 認參數,
+//! Duplicated : the number of parameter and the type of the parameters of them are same
+//public Dog(double weight) {
+//  this.weight = weight;
+//}
+
+public Dog(double height) {
+  this.height = height;
 }
 
 //! getter for weight and height
@@ -28,6 +38,7 @@ public double getHeight() {
   return this.height;
 }
 
+// ! Method 都一定係public
 // ! A presentation of weight and height
 public double getBmi() {
   BigDecimal heightSquare = BigDecimal.valueOf(height) //
@@ -41,6 +52,7 @@ public double getBmi() {
 
 
 //! setter (update attribute values)
+//! setWeight and setHeight method name are difference, thus they can exist tgt
 public void setWeight(double weight) {
   this.weight = weight;
 }
@@ -68,6 +80,7 @@ public static void main(String[] args) {
 
     System.out.println(d1.getBmi());
     System.out.println(d2.getBmi());
-}
 
+
+}
 }

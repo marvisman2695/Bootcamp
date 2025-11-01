@@ -29,7 +29,7 @@ public double getArea() {
          .multiply(BigDecimal.valueOf(Math.PI)) //
          .setScale(2, RoundingMode.HALF_UP) //
          .doubleValue();
-}
+  }
   //getDiameter
   public double getDiameter() {
     return BigDecimal.valueOf(this.radius)//
@@ -63,5 +63,4 @@ public double getArea() {
     System.out.println("total area =" +total);
 
   }
-    
 }
