@@ -12,6 +12,6 @@ public String getColor() {
 
 public void setColor(String color) {
   this.color = color;
-  
+
 }
 }

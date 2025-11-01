@@ -42,16 +42,15 @@ public class Hotel {
       System.out.println(h1.name);
       System.out.println(h1.room);
       System.out.println(h1.rating);
+      System.out.println(h1.getName()+" "+h1.getRoom()+" " +h1.getRating()+"/5 ");
       
-
       Hotel h2 = new Hotel("Ritz",171,5.0);
       System.out.println(h2.name);
       System.out.println(h2.room);
       System.out.println(h2.rating);
 
       Hotel h3 =new Hotel("LM", 228, 4.9);
-      System.out.println(h3.getName());
-      System.out.println(h3.getRoom());
+      System.out.println(h3.getName()+" " + h3.getRoom()+" " + h3.getRating()+"/5 ");
 
       // without Class
       String[] name = new String[] {"Ritz","Cordis"};

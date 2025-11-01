@@ -7,6 +7,11 @@ public class Person {
     this.eyes[0] = new Eye("BlACK");
     this.eyes[1] = new Eye("BlACK");
   }
+  
+  //change right eye color
+  public void changeRightEyeColor (String color) {
+    this.eyes[1].setColor(color); //this.eyes[1].getcolor = color ->get color 已經代表"Black"
+  }
 
   public void setLeftEye(Eye eye) {
     this.eyes[0] = eye;
