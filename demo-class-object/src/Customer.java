@@ -14,7 +14,7 @@ public class Customer {
 
   //is Vip -> total amount of all order >= 10000
   //public boolean Vip() {
-  public boolean isVip[] {
+  public boolean isVip() {
    BigDecimal total = BigDecimal.ZERO; //!背佐佢
     for (Order order : this.orders) {
       total = total.add(BigDecimal.valueOf(order.totalAmount()));   //if 無佐左邊total就等如你無草起個result 
@@ -29,10 +29,10 @@ public class Customer {
 //    System.out.println("Not Vip");
 //  }
 
-  public void addOrder(Order order){
+  public void addOrder(Order newOrder){
     Order[] newOrders  = new Order [this.orders.length +1];
     int idx = 0;
-    for (Order orders : this.orders) {
+    for (Order order : this.orders) {
       newOrders[idx] = order;
       idx++;
     }
@@ -59,7 +59,7 @@ public class Customer {
   //"DEF" -> 99(9.9 *10)
   System.out.println(o1.getSubtotal("DEF"));
 
-  Customer c1 = new Customer();
+  // Customer c1 = new Customer();
 
   //o1.addItem(newItem(""))
   }

@@ -21,7 +21,7 @@ public class DemoStringBuilder {
       //Object 個框都依然係同一個
 
       BigDecimal bd = new BigDecimal("3.5");
-      bd.add(BigDecimal.TEN);
+      bd = bd.add(BigDecimal.TEN);
       System.out.println(bd);
 // difference bd = -> new result
       bd = bd.add(BigDecimal.TEN);
@@ -30,7 +30,7 @@ public class DemoStringBuilder {
       //! Performance of concat (StringBuilder win!)
       long before = System.currentTimeMillis();
       result = "";
-      for (int i = 0; i <1000; i++) {
+      for (int i = 0; i <100000; i++) {
         result += "a";  //! 呢度係create佐1000個新object 
       }
       long after = System.currentTimeMillis();
@@ -43,6 +43,11 @@ public class DemoStringBuilder {
       }
       after = System.currentTimeMillis();
       System.out.println(after-before); // ~ 2 ms
+
+      // Real Use case, usually concat 2 strings, but not 100 thousands strings...
+    String url = "https://www.apple.com";
+    url += url + "/products";
+    System.out.println(url); // https://www.apple.comhttps://www.apple.com/products
 
 
       // Literal Pool
@@ -57,5 +62,8 @@ public class DemoStringBuilder {
       
       s1 = String.valueOf("hello"); //!Firtly find in String pool
       System.out.println(s1 == s2); //true
+
+      String s3 = s1.replace('e', 'x');
+
     }
 }

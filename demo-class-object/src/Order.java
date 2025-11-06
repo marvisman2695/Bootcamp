@@ -12,17 +12,18 @@ public class Order {
     return this.items.length;
   }
   
-  public void subtotal(double subtotal) {
-  this.subtotal = subtotal;
-}
-  public double getSubtotal(String itemName) {
+  // public double subtotal(String itemName) {
+  // this.subtotal = subtotal;
+    public double getSubtotal(String itemName) {
 for (Item item : this.items) {
   if (item.getName().equals(itemName)) {
-    return item.subtotal();
+    return item.totalAmount();
   }
 }
 return 0.0;
 }
+
+
 
 
 

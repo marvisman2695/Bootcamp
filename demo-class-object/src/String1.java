@@ -1,22 +1,105 @@
+
+import java.math.BigDecimal;
+import java.util.Arrays;
+
+//!Purposr: String 1 vs String (Try to simulate String Design)
 public class String1 {
-  private char[] values;
-
+  private char[] values; //我點草都可以
+   
   //constructor
-
+  public String1(String str) {
+    this.values = new char[str.length()];
+    int idx = 0;
+    for (char c : str.toCharArray()){
+      this.values[idx++] = c;
+    }
+  }
+ 
   //length()
+  public int length() {
+    return this.values.length;
+  }
+  //public static void main(char[] args) {
+     //String1 x1 = new String1('hello');
+     //System.out.println(length());
+
 
   //charArt(int index) return char
+  public char charAt(int index){
+    return this.values[index];
+  }
 
   // replace(...)
+  //! Revise itself?? NO!
+  public String1 replace(char fromChar, char byChar) {
+    String str = "";
+    for (char c :this.values) {
+      if (c == fromChar) {
+        str += byChar;
+      }else{
+        str += c;
+      }
+      return new String1(str);
+    }
+  }
 
   //substring(...)
+  //! revise this.value?? NO!!!
+  public String1 substring(int fromIndex, int endIndex) {
+    String str = "";
+    for (int i = fromIndex; i <endIndex; i++) {
+      str +=this.values[i]; //String + char -> Strin //!String 加任何野都係string
+      //記住唔好改變自己this value
+    }
+    return new String1(str);
+  }
+
 
   //equals(String1 s)
+  //!!Early Return (coding pattern)
+  public boolean equals(String s) {
+    //1.different length -> false
+    if (this.values.length != s.length()) {
+      return false;
+    }
+    //2.compare their char values, if any of them are not same -> return false
+    int idx = 0;
+    for (char c : s.toCharArray()) {
+      if (this.values[idx++] !=c) {
+        return false;
+      }
+    }
+    return true;
+  }
+
+  public char[] getValues() {
+    return this.values;
+  }
+
+  public String toString() {
+    return new String(this.values);
+  }
 
 
 
 public static void main(String[] args) {
-    String1 s = new String1("hello");
+  BigDecimal bd = new BigDecimal("2.5");
+
+    String1 s1 = new String1("hello");
+    String s2 = "hello";
     
+
+    System.out.println(s1.equals(s2));
+    System.out.println(s1.equals("hello"));
+    System.out.println(s1.equals("Hxllo"));
+
+    System.out.println(Arrays.toString(s1.substring(1, 3).getvalues()));
+    System.out.println(s1.substring(1, 3));
+
+    System.out.println(Arrays.toString(s1.replace('e', 'x').getValues()));
+
+    //!system.out.println() -> call object's toString ()
+    System.out.println(s1.replace('e', 'x'));
+    System.out.println(BigDecimal.valueOf(3.5));
 }
 }
