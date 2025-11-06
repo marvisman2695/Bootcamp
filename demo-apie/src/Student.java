@@ -17,6 +17,7 @@ public class Student extends Human { //繼承
     this.name = name;
   }
 
+  //Getter
   public int getId() {
     return this.id;
   }
@@ -24,10 +25,8 @@ public class Student extends Human { //繼承
   public String getName() {
     return this.name;
   }
-  public String getName() {
-    return this.name;
-  }
 
+  //Setter
   public void setName (String name) {
     this.name = name;
   }
@@ -37,10 +36,10 @@ public class Student extends Human { //繼承
   @Override
   public double getHeight() {
     System.out.println("Student's getHeight");
-    this.getHeight(); 
-    return super.getHeight() + this.getHeight();
+    return super.getHeight() /100.0;
   }
 
+  //Access parent's public field
   public LocalDate getParentDob() {
   return super.dateofBirth; // Parent Container expose dateOfBirth directly (public)
   }

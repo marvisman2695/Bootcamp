@@ -12,7 +12,7 @@ public final String https = "https";
 public static final int HOUR_PER_DAY = 24;
 
 // ! Object's method can access static variable & method
-  // ! Static method CANNOT access objects
+// ! Static method CANNOT access objects
 
   private int x;
   private int y;
