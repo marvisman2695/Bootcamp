@@ -1,7 +1,7 @@
 
 import java.time.LocalDate;
 
-public class Student extends Human { //繼承
+public class Student extends Human implements Eatable { //繼承
   //! Static Variable (靜態變量)
   //! 生存另一世界的variable
   //! Student ID 由另一世界去assign
@@ -30,14 +30,7 @@ public class Student extends Human { //繼承
   }
 
   //Getter
-  public int getId() {
-    return this.id;
-  }
-
-  public String getName() {
-    return this.name;
-  }
-
+  
   public Candy[] getCandies() {
     return this.candies;
   }
@@ -46,13 +39,13 @@ public class Student extends Human { //繼承
     return this.candyCount;
   }
 
-  //Setter
-  public void addCandy() {
+    public void addCandy() {
     this.candyCount++;
   }
 
-  public void setName (String name) {
-    this.name = name;
+  @Override
+  public void eat(){
+    System.out.println("student is eating..");
   }
 
   public void receiveCandy(Candy newCandy) {
@@ -65,6 +58,19 @@ public class Student extends Human { //繼承
     this.candies = newCandies;
   }
 
+  public int getId() {
+    return this.id;
+  }
+
+  public String getName() {
+    return this.name;
+  }
+
+  public void setName (String name) {
+    this.name = name;
+  }
+
+  
   //! By default for Inheritance, child Class ( Student) dont need to rewrite parent method
   // method is 技能,override 係重寫,覆蓋
   @Override

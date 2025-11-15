@@ -3,7 +3,7 @@ import java.util.Random;
 
 public class Teacher {
   public static int candyCount = 23;
-  private static final String[] CANDY_COLORS = new String[] {"RED", "BLUE", "YELOW"}; // 0,1,2
+  private static final String[] CANDY_COLORS = new String[] {"RED", "BLUE", "YELLOW"}; // 0,1,2
 
   //Bonus Question
   private Candy[] candies;
@@ -19,7 +19,7 @@ public class Teacher {
   }
 
 
-  public void distributionAll(Student[] student) { // ! given Students array
+  public void distributionAll(Student[] students) { // ! given Students array
     int candyIdx = 0;
     while(candyIdx < this.candies.length) { // teacher's candy (0 - 36)
     for (Student student : students) {
@@ -50,19 +50,12 @@ public class Teacher {
        // Algorithm (算法) -> loop + if + break -> Performance (Time Complexity) / Space Complexity
       Student[] students = new Student[] {new Student(), new Student(), new Student(), new Student(), new Student()};
       while(candyCount >= 0) { // counting 22-> 0) -> 23times
-        //System.out.println(candyCount);//22
         for (int i = 0; i < students.length; i++) {
             if(--candyCount < 0) { // 23->1
               break; // break 個for loop
             }
             students[i].addCandy();
         }
-        //after break
-        // while(candyCount > 0){
-        // for (int i = 0; i <students.length; i++) {
-        //     if (candyCount-- <= 0) 
-        //     break;
-        // }
       }
       System.out.println(students[0].getCandyCount()); //5
       System.out.println(students[1].getCandyCount()); //5

@@ -3,7 +3,8 @@ public class Circle extends Shape {  //Child
   private double radius;
 
   public Circle () {
-    super();  //! implicitly calling parent empty consrtructor
+    //super();  
+    //! implicitly calling parent empty consrtructor
   }
 
   public Circle(double radius, String color) {
