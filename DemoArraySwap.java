@@ -11,6 +11,7 @@ public class DemoArraySwap {
       x = y; // backup y
       y = temp;
       System.out.println("x=" + x +", y=" +y);
+      //"x=" show 出x=, + x show 出新x 的value, :x=7
 
       //given int[]
       int[] arr1 =new int[5];

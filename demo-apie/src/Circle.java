@@ -1,10 +1,10 @@
-public class Circle extends Shape {  //Child
-  //! By Default, Child's empty constructor would call Parent's empty constructor
+public class Circle extends Shape {
+  // ! By Default, Child's empty constructor would call Parent's empty constructor
   private double radius;
 
-  public Circle () {
-    //super();  
-    //! implicitly calling parent empty consrtructor
+  public Circle() {
+    // implicitly calling parent empty constructor
+    // super();
   }
 
   public Circle(double radius, String color) {
@@ -12,24 +12,24 @@ public class Circle extends Shape {  //Child
     this.radius = radius;
   }
 
-  public double getradius() {
+  public double getRadius() {
     return this.radius;
   }
 
-  public void setradius(double radius) {
-    this.radius = radius;
+  // getArea()
+  // Skip Bigdecimal
+  public double getArea() {
+    return this.radius * this.radius * Math.PI;
   }
 
-  // get area()
-  //Skip Bigdecimal
-  public double getArea() {
-    return this.radius* this.radius * Math.PI;
+  public double getArea2() {
+    return this.radius * 10;
   }
 
   public static void main(String[] args) {
-      Circle c1 = new Circle(3.5, "RED");
-      Circle c2 = new Circle();
+    Circle c1 = new Circle(3.5, "RED");
+    Circle c2 = new Circle();
 
-      System.out.println(c1.getColor());
+    System.out.println(c1.getColor());
   }
 }
