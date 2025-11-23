@@ -2,7 +2,7 @@ public class Deck {
   // card array
   private Card[] cards;
 
-  private Deck() {
+  public Deck() {
     this.cards = new Card[Suite.values().length 
     *Rank.values().length ];
 

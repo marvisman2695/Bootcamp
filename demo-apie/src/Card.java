@@ -1,4 +1,7 @@
 //!enum
+import java.util.Arrays;
+import java.util.Objects;
+
 public class Card {
   private Suite suite; //DIAMOND. CLUB, HEART, SPADE
   private Rank rank; // A, 2, 3, .....J, Q, K
@@ -8,7 +11,32 @@ public class Card {
     this.rank = rank;
   }
 
-  @Override  // Call緊祖先
+  public Suite getSuite(){
+    return this.suite;
+  }
+
+  public Rank getRank() {
+    return this.rank;
+  }
+
+  @Override
+  public boolean equals(Object obj) {
+    if (this == obj)
+      return true;
+    if (!(obj instanceof Card))
+      return false;
+    Card card = (Card) obj;
+    return Objects.equals(this.suite, card.getSuite()) 
+      && Objects.equals(this.rank, card.getRank());
+  }
+
+    //hashCode()
+@Override
+public int hashCode() {
+  return Objects.hash(this.suite, this.rank);
+}
+
+@Override  // Call緊祖先
     public String toString() {
       return "Card(" //
       + "suite=" + this.suite
@@ -16,36 +44,11 @@ public class Card {
       +")";
     }
 
-    public Suite getSuite(){
-      return this.suite;
-    }
-
-    public Rank getRank() {
-      return this.rank;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-      if (this == obj)
-      return true;
-      if (!(obj instanceof Card))
-      return false;
-      Card card = (Card) obj;
-  return Object.equals(this.suite, card.getSuite())
-    && Object.equals(this.rank, card.getRank());
-    }
-
-
-    //hashCode()
-@Override
-public int hashCode() {
-  return Object.hash(this.suite, this.rank);
-}
   //constructor, getter
   public static void main(String[] args) {
       //52 cards
       //Deck.java
       Deck deck = new Deck();
-    System.out.println(Array.toString(deck.getCards()));
+    System.out.println(Arrays.toString(deck.getCards()));
   }
 }

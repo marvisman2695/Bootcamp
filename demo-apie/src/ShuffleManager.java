@@ -29,7 +29,7 @@ public class ShuffleManager {
     Deck d1 = new Deck();
       ShuffleManager sm = new ShuffleManager(d1);
       sm.shuffle();
-      System.out.println(d1.getCards());
+      //System.out.println(d1.getCards());
   }
 }
 

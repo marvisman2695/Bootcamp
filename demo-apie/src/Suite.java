@@ -1,3 +1,7 @@
 public enum Suite {
-  DIAMOND, CLUB, HEART, SPADE,;
+  DIAMOND, 
+  CLUB, 
+  HEART, 
+  SPADE,
+  ;
 }

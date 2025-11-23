@@ -5,6 +5,7 @@ public class HandManager {
     // if card.length != 5, throw exception
     this.cards = cards;
   }
+
   public boolean withEmptyCard() {
     return cards[0] == null || cards[1] == null//
     || cards[2] == null || cards[3] == null 
@@ -36,8 +37,17 @@ public class HandManager {
   return zeroCount == 11 && twoCount ==1 && threeCount == 1;
 }
 
+// Straight FLush
+
 public static void main(String[] args) {
 Card[] hand1 = new Card[] { //
+  new Card(Suite.CLUB,Rank.ACE)
+  ,new Card(Suite.CLUB,Rank.FOUR)
+  , new Card(Suite.SPADE,Rank.ACE)
+  , new Card(Suite.HEART,Rank.ACE)
+  , new Card(Suite.DIAMOND,Rank.FOUR) 
+};
+Card[] hand2 = new Card[] { //
   new Card(Suite.CLUB,Rank.ACE)
   ,new Card(Suite.CLUB,Rank.FOUR)
   , new Card(Suite.SPADE,Rank.ACE)
@@ -49,5 +59,4 @@ System.out.println(hm.isFullHouse());
 
 }
 
-}
 }
