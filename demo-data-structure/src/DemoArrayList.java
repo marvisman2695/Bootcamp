@@ -1,5 +1,6 @@
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class DemoArrayList {
   
@@ -14,6 +15,7 @@ public class DemoArrayList {
     //2. Same type of values in the array
 
     //ArrayList has variable length
+    //add  & remove 係改寫個loop的過程
     ArrayList<String> names2 = new ArrayList<String>();
     names2.add("John");
     names2.add("Peter");
@@ -38,5 +40,26 @@ public class DemoArrayList {
 
     //Cat class -> ArrayList<Cat>
     //Animal.java ( Cat extends Animanl) ->ArrayList<Animal>
+    Cat c1 = new Cat("John");
+    Cat c2 = new Cat("Mary");
+   
+    //Approach1:Create ArrayListObject 
+    ArrayList<Cat> cats = new ArrayList<>();
+    cats.add(c1);
+    cats.add(c2);
+    cats.add(new Cat("Leo"));
+
+    //remove -> for (Cat cat: cats) loop ->
+    cats.remove(new Cat("Leo"));
+    System.out.println(cats);
+
+    //! remove() -> remove first matched object
+    // you can try put 
+
+    //Approach 2:
+    ArrayList<Cat> cats2 = 
+      new ArrayList<>(List.of(new Cat("Oscar"),(new Cat("Jenny")));
+      
+    
   }
 }

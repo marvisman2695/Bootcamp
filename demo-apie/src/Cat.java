@@ -8,7 +8,7 @@ public class Cat extends Animal {
     Object o2 = new Animal();
 
    System.out.println(a1 instanceof Cat); // true
-   System.out.println(a1 instanceof Dog); // true
+   System.out.println(a1 instanceof Dog); // false
 
   a1 = new Dog();
   System.out.println(a1 instanceof Dog); //t
