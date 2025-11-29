@@ -46,7 +46,7 @@ public class DemoPrimitives {
     float f1 = 10.123456789f;
     double d2 = 10.123456789f;
 
-    double d10 = 10.3;
+    double d10 = 10.3d;
 
     // error, not because of the actual value, but the type
     // float f10 = d10; // risk -> error (Step1: risky)

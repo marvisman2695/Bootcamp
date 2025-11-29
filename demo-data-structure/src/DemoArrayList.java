@@ -57,8 +57,11 @@ public class DemoArrayList {
     // you can try put 
 
     //Approach 2:
-    ArrayList<Cat> cats2 = 
-      new ArrayList<>(List.of(new Cat("Oscar"),(new Cat("Jenny")));
+   ArrayList<Cat> cats2 =
+        new ArrayList<>(List.of(new Cat("Oscar"), new Cat("Jenny")));
+
+ //    ArrayList<Cat> cats2 = 
+//      new ArrayList<>(List.of(new Cat("Oscar"),(new Cat("Jenny")));
       
     
   }
