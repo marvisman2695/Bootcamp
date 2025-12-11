@@ -1,3 +1,4 @@
+import java.math.BigDecimal;
 import java.util.HashSet;
 
 public class DemoHashSet {
@@ -14,10 +15,12 @@ public class DemoHashSet {
     
     System.out.println(cats.size()); //2
 
-    System.out.println(cats.contains("John")); //false
+    System.out.println(cats.contains(new Cat("John"))); //false
 
     System.out.println(new String("hello").equals(new String("hello"))); // t
     
+    System.out.println(new BigDecimal("1").equals(new BigDecimal("1"))); // true
+
     //!why do we nees HashSet?
     //-Avoid duplicated
     //at the same time, remove duplicated

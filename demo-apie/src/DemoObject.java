@@ -8,7 +8,7 @@ public class DemoObject {
   // "hello" -. String Object
   Object o1 = "hello";
   Object o2 = new Warrior();
-  Shape sh1 = new Circle();
+  Circle sh1 = new Circle();
 
   //Student stu = "hello";
  Object[] things = new Object[3];

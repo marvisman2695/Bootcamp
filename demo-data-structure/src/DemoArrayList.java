@@ -60,9 +60,8 @@ public class DemoArrayList {
    ArrayList<Cat> cats2 =
         new ArrayList<>(List.of(new Cat("Oscar"), new Cat("Jenny")));
 
- //    ArrayList<Cat> cats2 = 
-//      new ArrayList<>(List.of(new Cat("Oscar"),(new Cat("Jenny")));
-      
-    
+    //Combine 2 cat List
+    cats. addAll(cats2);
+ 
   }
 }

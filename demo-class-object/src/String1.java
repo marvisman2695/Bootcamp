@@ -15,18 +15,27 @@ public class String1 {
     }
   }
  
+  //! Control / Presentation
   //length()
   public int length() {
     return this.values.length;
   }
-  //public static void main(char[] args) {
-     //String1 x1 = new String1('hello');
-     //System.out.println(length());
 
 
   //charArt(int index) return char
   public char charAt(int index){
     return this.values[index];
+  }
+  
+  //substring(...)
+  //! revise this.value?? NO!!!
+  public String1 substring(int fromIndex, int endIndex) {
+    String str = "";
+    for (int i = fromIndex; i < endIndex; i++) {
+      str +=this.values[i]; //String + char -> Strin //!String 加任何野都係string
+      //記住唔好改變自己this value
+    }
+    return new String1(str);
   }
 
   // replace(...)
@@ -36,23 +45,13 @@ public class String1 {
     for (char c :this.values) {
       if (c == fromChar) {
         str += byChar;
-      }else{
+      } else {
         str += c;
       }
-      return new String1(str);
     }
+    return  new String1(str);
   }
 
-  //substring(...)
-  //! revise this.value?? NO!!!
-  public String1 substring(int fromIndex, int endIndex) {
-    String str = "";
-    for (int i = fromIndex; i <endIndex; i++) {
-      str +=this.values[i]; //String + char -> Strin //!String 加任何野都係string
-      //記住唔好改變自己this value
-    }
-    return new String1(str);
-  }
 
 
   //equals(String1 s)
@@ -89,17 +88,19 @@ public static void main(String[] args) {
     String s2 = "hello";
     
 
-    System.out.println(s1.equals(s2));
-    System.out.println(s1.equals("hello"));
-    System.out.println(s1.equals("Hxllo"));
+    System.out.println(s1.equals(s2)); //t
+    System.out.println(s1.equals("hello")); //f
+    System.out.println(s1.equals("Hxllo")); //f
 
-    System.out.println(Arrays.toString(s1.substring(1, 3).getvalues()));
-    System.out.println(s1.substring(1, 3));
+    System.out.println(Arrays.toString(s1.substring(1, 3).getValues())); //e, l
+    System.out.println(s1.substring(1, 5)); //el
 
-    System.out.println(Arrays.toString(s1.replace('e', 'x').getValues()));
+    System.out.println(Arrays.toString(s1.replace('e', 'x').getValues())); //[h, x, l, l, o]
+    System.out.println("hello".replace('e', 'x')); // hxllo
+
 
     //!system.out.println() -> call object's toString ()
-    System.out.println(s1.replace('e', 'x'));
-    System.out.println(BigDecimal.valueOf(3.5));
-}
+    System.out.println(s1.replace('e', 'x')); //hxllo
+    System.out.println(BigDecimal.valueOf(3.5)); //3.5
+ }
 }

@@ -49,6 +49,12 @@ public int hashCode() {
       //52 cards
       //Deck.java
       Deck deck = new Deck();
-    System.out.println(Arrays.toString(deck.getCards()));
+    System.out.println(Arrays.toString (deck.getCards()));
+   Card c1 = new Card(Suite.DIAMOND, Rank.KING);
+    Card c2 = new Card(Suite.HEART, Rank.QUEEN);
+    System.out.println(c1.equals(c2)); // false
+
+    Card c3 = new Card(Suite.HEART, Rank.QUEEN);
+    System.out.println(c2.equals(c3)); // true
   }
 }

@@ -1,4 +1,4 @@
-public class Dog extends Animal {
+public class Dog {
   private String name;
   private Dog dog;
   
@@ -20,8 +20,16 @@ public class Dog extends Animal {
         currentDog.setNextDog(newDog);
         break; // break the while loop
       }
-   currentDog = currentDog.getNextDog() ;
+     currentDog = currentDog.getNextDog() ;
+    }
   }
+
+   public String getName() {
+    return this.name;
+  }
+
+  public Dog getNextDog() {
+    return this.dog;
   }
 
   public Dog getDog() {
@@ -34,21 +42,21 @@ public class Dog extends Animal {
     int count = 0;
     while (currentDog != null) {
       count ++;
-   currentDog = currentDog.getDog() ;
-  }
-  return count;
+      currentDog = currentDog.getNextDog() ;
+    }
+    return count;
   }
 
   public static void main(String[] args) {
       Dog d1 = new Dog("John");
       d1.add(new Dog("Mary"));
-      System.out.println(d1.getDog().getName()); //mary
-      System.out.println(d1.getDog().getName()); //null
-      System.out.println(d1.size()); //2
+    System.out.println(d1.getNextDog().getName()); // Mary
+    System.out.println(d1.getNextDog().getNextDog()); // null
+    System.out.println(d1.size()); // 2
 
-       d1.add(new Dog("Tommy"));
-      System.out.println(d1.getDog().getNextDog().getName()); //mary
-      System.out.println(d1.getDog().getName()); //null
-      System.out.println(d1.size());
-      }
-    }
+    d1.add(new Dog("Tommy"));
+    System.out.println(d1.getNextDog().getNextDog().getName()); // Tommy
+    System.out.println(d1.size()); // 3
+      
+   }
+}

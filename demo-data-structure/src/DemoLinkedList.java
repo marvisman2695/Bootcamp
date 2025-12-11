@@ -2,7 +2,6 @@
 import java.util.LinkedList;
 
 public class DemoLinkedList {
-  
   public static void main(String[] args) {
     //!LinkedList vs ArrayList
     //1.add() (add to tail) : LinkList has little advantage
@@ -20,8 +19,9 @@ public class DemoLinkedList {
     System.out.println(cats.size()); //1
     System.out.println(cats);
 
-    System.out.println(cats.contains("Mary")); // false
-    System.out.println(cats.contains("John")); // t
+    System.out.println(cats.contains(new Cat("Mary"))); // false
+    System.out.println(cats.contains(new Cat("John"))); // true
+
 
   }
 }

@@ -68,6 +68,9 @@ public class Cat { //形容緊class 有咩特徵
     Cat c4 = new Cat(); //John 10
     System.out.println(c3.getAge()); //8
     System.out.println(c4.getAge()); // 10
-    System.out.println(c3.getName()); //8
+
+    System.out.println(c3.getName()); //Mary
+    System.out.println(c4.getName()); //John
+    
   }
 }

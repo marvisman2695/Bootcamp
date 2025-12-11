@@ -24,9 +24,5 @@ public class Panda {
         //搵返RED個location, 個
         Color color = Color.valueOf('R');
         System.out.println(color); //RED
-
-          // Direction
-        Direction direction = Direction.valueOf('N');
-        System.out.println(direction); //North
       }
 }

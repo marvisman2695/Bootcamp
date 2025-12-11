@@ -49,7 +49,7 @@ public abstract double getArea();
     if (value == 1) {
       return new Square(1.0, "WHITE");
     } else if (value == 2) {
-      return new Circle(2.5, "WHITE");
+      return new Circle(2.5, "White");
     }
     return null;
   }

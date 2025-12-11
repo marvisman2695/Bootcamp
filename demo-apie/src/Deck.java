@@ -14,9 +14,11 @@ public class Deck {
       }
     }
   }
-    public Card[]getCards() {
-      return this.cards;
+
+  public Card[]getCards() {
+    return this.cards;
   }
+  
   public void setCards(Card[] cards) {
     this.cards = cards;
   }
