@@ -5,6 +5,8 @@ public class IntegerBox {
   this.value = value;
  }
 
-
+ public Integer getValue() {
+  return this.value;
+ }
  
 }

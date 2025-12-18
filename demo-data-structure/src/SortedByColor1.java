@@ -27,7 +27,7 @@ public class SortedByColor1 implements Comparator<Ball> {
     Ball b3 = new Ball(Ball.Color.BLUE, 8);
 
     ArrayList<Ball> balls = new ArrayList<>(List.of(b1, b2, b3));
-    if () {
+    if() {
       Collections.sort(balls, new SortedByColor1());
     } else {
       Collections.sort(balls, new SortedByColor2());

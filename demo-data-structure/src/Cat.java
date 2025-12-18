@@ -3,7 +3,7 @@ import java.util.Objects;
 public class Cat {
   private String name;
 
-  public Cat(String name) {
+  public Cat(String name, Integer age) {
     this.name = name;
   }
 

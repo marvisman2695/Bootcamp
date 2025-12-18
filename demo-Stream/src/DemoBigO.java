@@ -17,17 +17,17 @@ public class DemoBigO {
     }
   // DSA 
   List<String> names = new ArrayList<>();
-  names.add("Mary");
-  names.add("Tommy");
-  names.add("Jenny");
-  System.out.println(names.get(2));
+  // List<String> names = new LinkedList<>();
+    names.add("Mary"); // O(n) for ArrayList, O(1) for LinkedList
+    names.add("Tommy");
+    names.add("Jenny");
+    System.out.println(names.get(2)); // O(1) for ArrayList, O(n) for LinkedList
 
-  Queue<String> nickNames = new LinkedList<>();
-  //Queue<String> nickNames = new ArrayDeque<>();
-  nickNames.add("Leo");
-  nickNames.add("Johnny");
-  nickNames.add("Oscar");
-  nickNames.poll();
-  
+    Queue<String> nickNames = new LinkedList<>();
+    // Queue<String> nickNames = new ArrayDeque<>();
+    nickNames.add("Leo"); // O(n) for ArrayList, O(1) for LinkedList
+    nickNames.add("Oscar");
+    nickNames.add("Johnny");
+    nickNames.poll(); // O(n) for ArrayList, O(1) for LinkedList
   }
 }

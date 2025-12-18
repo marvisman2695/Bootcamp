@@ -1,17 +1,16 @@
-
-import java.util.ArrayList;
+import java.util.Deque;
 import java.util.LinkedList;
+import java.util.List;
 
 public class MSWord {
-  //Curent
-  
-  private ArrayList<Character> characters;
-
-  //Deque
-
+  //Curent charater
+  private List<Character> characters;
+  // Deque
+  private Deque<Character> undoStack;
+  private Deque<Character> redoStack;
 
   public MSWord() {
-     this. characters = new LinkedList<>();
+    this.characters = new LinkedList<>();
   }
 
   public void write(char c) {

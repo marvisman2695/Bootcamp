@@ -13,8 +13,8 @@ public class DemoPriorityQueue {
   //Priority Queue hs no ordering during add proess
 System.out.println(pq); //alex
 
+System.out.println(pq.poll()); // Alex
 pq.add("Ben");
-
 System.out.println(pq.poll()); // Ben
 System.out.println(pq.poll()); // Cathy
 System.out.println(pq.poll()); // Steven
@@ -25,7 +25,7 @@ System.out.println(pq.poll()); // Steven
    integers.add(120);
    integers.add(50); // 50,100,120
    System.out.println(integers.poll()); // 120
-   integers.add(27);
+   integers.add(80);
    System.out.println(integers.poll()); //100
    System.out.println(integers.poll()); //80
    System.out.println(integers.poll());//50

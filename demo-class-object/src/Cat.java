@@ -1,4 +1,4 @@
-
+// ! Class -> blueprint (模), file (harddisk)
 // ! Object
 public class Cat { //形容緊class 有咩特徵
   // ! Attribute
@@ -72,5 +72,6 @@ public class Cat { //形容緊class 有咩特徵
     System.out.println(c3.getName()); //Mary
     System.out.println(c4.getName()); //John
     
+    System.out.println(c3.name);
   }
 }

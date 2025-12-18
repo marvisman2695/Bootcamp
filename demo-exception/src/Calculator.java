@@ -1,7 +1,5 @@
-
-
 public class Calculator {
-  
+    // ! throw -> something happened, but cannot be recovered.
   public static char firstChar(String str) { //String as parameter, you should consider null, ""
     if (str == null  || str.equals("")) // || if ("".equals(str)); -> able to handle. str is null or ""
       throw new RuntimeException("The parameter cannot be null");  

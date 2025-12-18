@@ -1,0 +1,44 @@
+public class DemoThread {
+  int x = 0;
+
+  public void increment() {
+    this. x++;
+  }
+
+  public int getX() {
+     return this.x;
+  }
+
+  public static void main(String[] args) {
+    int x = 3;
+    x++;
+    System.out.println(x);
+    x++;
+    System.out.println(x);
+
+    DemoThread d1 = new DemoThread();
+
+    Runnable task = () ->  {
+      for (int i = 0; i < 100_000; i++);
+      d1.increment();
+    
+  }; 
+    
+  //! t1 is the secoud thread
+    Thread t1 = new Thread(task);
+  //! t2 is the third thread // assign task to the thread
+    Thread t2 = new Thread(task); // assign task to the thread
+
+    t1.run(); // Thread t1 starts to execute task
+    t1.run(); // Thread t1 starts to execute task
+
+    t1.start();
+    t2.start();
+
+    //!
+
+    System.out.println(d1.getX());
+    //! Twi problems;
+    //1. t1 and t1 doing the same task, which is x++. They change the value of the same memory slot.
+  }
+}

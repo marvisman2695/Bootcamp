@@ -1,4 +1,3 @@
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,6 +13,15 @@ public abstract class Shape {
     return total;
   }
 
+  public static double totalArea3(ArrayList<Circle> circles) {
+    double total = 0;
+    for (Circle circle : circles) {
+      total += circle.area();
+     }
+    return total;
+    }
+  
+
   //! for static mathod of generic,
   //! we have to define the range of T
 public static<T extends Shape> double totalArea2(ArrayList<T> shapes) {
@@ -22,7 +30,7 @@ public static<T extends Shape> double totalArea2(ArrayList<T> shapes) {
       total += shape.area();
     }
     return total;
-}
+  }
 
   public static void main(String[] args) {
     ArrayList<Shape> shapes = new ArrayList<>();
@@ -30,7 +38,7 @@ public static<T extends Shape> double totalArea2(ArrayList<T> shapes) {
 
     for (Shape shape : shapes) {
       System.out.println(shape.area());
-  } 
+   } 
 
     System.out.println(totalArea(shapes));
 

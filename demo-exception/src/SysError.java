@@ -1,5 +1,4 @@
 public enum SysError {
-  
   CUSTOMER_NOT_FOUND(47893, "Customer Not Found."), //
   ;
 
@@ -10,6 +9,7 @@ public enum SysError {
     this.code = code;
     this.message = message;
   }
+
   public int getCode() {
     return this.code;
   }
@@ -17,5 +17,4 @@ public enum SysError {
   public String getMessage() {
     return this.message;
   }
-  
 }

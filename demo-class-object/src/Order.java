@@ -1,4 +1,3 @@
-
 import java.math.BigDecimal;
 
 public class Order {
@@ -17,16 +16,11 @@ public class Order {
     public double getSubtotal(String itemName) {
 for (Item item : this.items) {
   if (item.getName().equals(itemName)) {
-    return item.totalAmount();
+    return item.subtotal();
   }
 }
 return 0.0;
 }
-
-
-
-
-
   public void addItem(Item newItem){  //!背佐佢
     Item[] newItems = new Item [this.items.length +1];
     // copy the original items into the new array
@@ -47,7 +41,7 @@ return 0.0;
     for (Item item : this.items) {
       //BigDecimal total = BigDecimal.valueOf(price)
       //.multiply(BigDecimal.valueOf(quantity));
-      total = total.add(BigDecimal.valueOf(item.totalAmount()));   //if 無佐左邊total就等如你無草起個result 
+      total = total.add(BigDecimal.valueOf(item.subtotal()));   //if 無佐左邊total就等如你無草起個result 
     }
   return total.doubleValue();
 

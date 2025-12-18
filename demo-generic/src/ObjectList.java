@@ -5,6 +5,10 @@ public class ObjectList<T> {
     this.objects = (T[]) new Object[0];
   }
 
+  public void add(T object) {
+    //...
+  }
+
   public static void main(String[] args) {
     //!ArrayList.class
     ObjectList<String> strings = new ObjectList<>();

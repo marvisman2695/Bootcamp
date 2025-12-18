@@ -1,3 +1,4 @@
+
 public class Box<T> {
   private T value;
 
@@ -17,9 +18,9 @@ public class Box<T> {
         //Generic
         //! Box<Animal> = Box2
     Box<Animal> animalBox = new Box<>(new Cat());
-  
-    ArrayList<String>;
-    //loop 住既時候call CharAt
+    Box<Fruit> fruitBox = new Box<>(new Orange());
+    
+    Box<Cat> catBox = new Box<>(new Cat());
   }
 }
 

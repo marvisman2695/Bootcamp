@@ -5,12 +5,15 @@ public class Customer {
   // Item :quantity x price
   //!依家係用orders 搵customer
 
-  // Classes : Customer, Order, Item
   private Order[] orders; //order係唔知自己係邊個customer
 
+  // Classes : Customer, Order, Item
+  
   public Customer() {
     this.orders = new Order[0];
   }
+
+  // ! Presentation
 
   //is Vip -> total amount of all order >= 10000
   //public boolean Vip() {
@@ -19,15 +22,8 @@ public class Customer {
     for (Order order : this.orders) {
       total = total.add(BigDecimal.valueOf(order.totalAmount()));   //if 無佐左邊total就等如你無草起個result 
     }
-    return total.doubleValue()>= 10000;
+    return total.doubleValue()>= 10000.0;
   }
-  //   this.orders = new Order[3];
-    //for (Order order : this.orders)
-//if (getsubTotal >= 10000) 
-//System.out.println("Vip");
-//  } else {
-//    System.out.println("Not Vip");
-//  }
 
   public void addOrder(Order newOrder){
     Order[] newOrders  = new Order [this.orders.length +1];
@@ -52,16 +48,22 @@ public class Customer {
   o1.addItem(new Item("IJK", 999.9,2));
 
 
-  //order total amount?
-  System.out.println(o1.totalAmount());
+ // order total amount?
+    System.out.println(o1.totalAmount()); // 2016.3
+    
+    // Given Item name, find the subtotal
+    // "DEF" -> 99 (9.9 x 10) 
+    System.out.println(o1.getSubtotal("DEF"));
 
-  //Given Item Name, find the subtotal
-  //"DEF" -> 99(9.9 *10)
-  System.out.println(o1.getSubtotal("DEF"));
+    Customer c1 = new Customer();
+    
+    // o1.addItem(new Item("XYZ", 9000, 1));
+    
+    c1.addOrder(o1);
+    
+    o1.addItem(new Item("XYZ", 9000, 1));
 
-  // Customer c1 = new Customer();
-
-  //o1.addItem(newItem(""))
+    System.out.println(c1.isVip()); // true
   }
-  }
+}
 

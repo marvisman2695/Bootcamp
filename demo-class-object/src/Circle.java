@@ -33,9 +33,9 @@ public double getArea() {
   //getDiameter
   public double getDiameter() {
     return BigDecimal.valueOf(this.radius)//
-    .multiply(BigDecimal.valueOf(2.0)) //
-    .setScale(2, RoundingMode.HALF_UP) //
-    .doubleValue();
+      .multiply(BigDecimal.valueOf(2.0)) //
+      .setScale(2, RoundingMode.HALF_UP) //
+      .doubleValue();
   }
 
   public static void main(String[] args) {
